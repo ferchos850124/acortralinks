@@ -1,0 +1,35 @@
+{% extends 'layouts/base.html' %} {% block titulo %} Productos {% endblock %} {% block contenido %}
+<h1>Listado de Productos</h1>
+
+<a href="{{ url_for('crear_producto') }}">Crear Productos</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio de venta</th>
+            <th>Precio de compra</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for producto in productos %}
+        <tr>
+            <td>{{ producto[0] }}</td>
+            <td>{{ producto[1] }}</td>
+            <td>{{ producto[2] }}</td>
+            <td>{{ producto[3] }}</td>
+            <td>{{ producto[4] }}</td>
+            <td>{{ producto[5] }}</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+
+<div>
+    <h2>Presentado por:</h2>
+    <h1>Wilson Huveymar Muñoz Tapia</h1>
+    <h1>Miguel Angel Esteban Fajardo Perenguez </h1>
+</div>
+{% endblock %}
