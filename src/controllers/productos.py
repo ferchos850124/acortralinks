@@ -37,13 +37,13 @@ def crear_producto():
 
     #aca es la cracion del producto
     return redirect(url_for('productos'))
-    
-@app.route('/productos/link', methods =['GET', 'POST'])
+    # AQUI EMPIEZA EL DESARROLLO DE ACORTAR LINKS
+@app.route('/productos/enlace', methods =['GET', 'POST'])
 def traer_link():
    
     if request.method == 'GET':
       
-        return render_template('/productos/link.html')
+        return render_template('/productos/enlace.html')
     else:
 
         nombre = request.form.get('link')
@@ -55,5 +55,5 @@ def traer_link():
         productosModel = ProductosModel()
         productosModel.insertar_link(nombre,p)
         
-        return("Guardado en BD")
+        return("El lnk fue Guardado en BD")
         

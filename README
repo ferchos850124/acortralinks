@@ -1,0 +1,11 @@
+PROYECTO SENCILLO PARA ACORTAR LINKS
+1. CONFIGURE SU PROYECTO BAJO EL MODELO MVC
+2. CORRA EL CODIGO pip install -r requirements.txt PARA INSTALAR LOS REQUISITOS DEL SU PROYECTO.
+3. CORRA EL CODIGO python main.py PARA INICIAR EL PROYECTO.
+4. VAYA A base de datos.sql PARA IMPORTAR O CREAR LA BASE DE DATOS, UTILICE MARIADB.
+5. VAYA A LA CARPERA config/db.py PARA CONFIGURAR LA CONEXION A LA BD.
+6. POR ULTIMO CREAR LA TABLA "ENLACES" CON LOS CAMPOS: IDE, PRYMARY, AUTOINCREMENT; ENLACE, VARCHAR 50, NULL
+   ALEATORIO, VARCHAR 50, NULL.
+7. RECARGUE, VAYA AL EXPLORADOR EN localhost:5000/productos/enclace, digite o copie el enlace, vaya a la
+   opcion guardar el Link, una vez hecho esto automaticamente se guarda el link en la bd en el campo enlace
+   el link completo y en campo aleatorio guarda aleatoriamente 4 caracteres del link o enlace.
